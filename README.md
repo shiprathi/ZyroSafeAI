@@ -1,205 +1,203 @@
-# 🚀 ZyroSafe AI  
-### Hyperlocal Income Insurance for Grocery Delivery Partners  
+# 🩵 ZyroSafe AI
+
+**Hyperlocal Income Protection for Grocery Delivery Partners**
+
+ZyroSafe AI is an AI-powered parametric insurance prototype designed to protect grocery delivery riders (Blinkit / Zepto) from **unexpected income loss** caused by real-world disruptions like heavy rainfall, traffic congestion, and flood alerts.
 
 ---
 
-## 📌 Problem Statement  
+## 🚀 Problem Statement
 
-Grocery delivery partners (Blinkit, Zepto) rely on completing multiple deliveries per hour to earn daily income. However, external disruptions such as heavy rain, flooding, and severe traffic congestion reduce their ability to work and lead to significant income loss.  
+Delivery riders face unpredictable income loss due to external disruptions.
+Existing insurance solutions do not cover **short-term income instability**.
 
-These disruptions are uncontrollable, yet currently there is no system to protect workers from such financial instability.  
-
----
-
-## 👤 Persona Scenario  
-
-Meet Ravi, a Blinkit delivery partner in Delhi.  
-He works 8 hours daily and earns ₹400–₹500 per day.  
-
-During heavy rainfall:  
-- Orders drop  
-- Roads become unsafe  
-- He cannot complete deliveries  
-
-👉 His income drops to ₹0 despite being available to work.  
+⚠️ This solution focuses **ONLY on income loss**
+❌ It does NOT cover health, life, or vehicle insurance
 
 ---
 
-## 💡 Proposed Solution  
+## 💡 What ZyroSafe AI Does
 
-ZyroSafe AI is an AI-powered parametric insurance platform designed for grocery delivery partners.  
+* Registers riders with basic details
+* Calculates **risk score dynamically**
+* Suggests **weekly insurance premiums**
+* Allows users to select plans (Basic / Smart / Pro)
+* Simulates **claim processing**
+* Detects **fraud cases**:
 
-The system:  
-- Monitors hyperlocal weather and traffic conditions  
-- Detects disruptions in real-time  
-- Automatically triggers payouts  
-- Eliminates manual claims  
-
-👉 Focus: **Income loss protection only (no health, vehicle, or accident coverage)**  
-
----
-
-## ⚙️ System Workflow  
-
-1. Rider onboarding (details + working zone)  
-2. AI-based risk profiling  
-3. Weekly plan selection  
-4. Real-time monitoring (weather & traffic APIs)  
-5. Parametric trigger detection  
-6. Validation (location + activity + duplication checks)  
-7. Instant payout  
+  * Location mismatch
+  * Duplicate claims
+* Displays full **Rider Dashboard**
 
 ---
 
-## 💰 Weekly Premium Model  
+## 🧠 Core Features
 
-| Plan  | Premium | Features |
-|------|--------|---------|
-| Basic | ₹29/week | Standard disruption coverage |
-| Smart | ₹49/week | Weather + Traffic protection |
-| Pro   | ₹69/week | Peak-hour multiplier + higher payout |
+### ✅ Rider Registration
 
----
+* Name, city, platform, zone
+* Income & active hours
 
-## ⚡ Parametric Triggers  
+### 🌧️ Risk Engine
 
-| Disruption | Trigger Condition |
-|-----------|-----------------|
-| Heavy Rain | Rainfall > 50 mm |
-| Flood | Flood alert in zone |
-| Heatwave | Temperature > 45°C |
-| Pollution | AQI > 300 |
-| Traffic | Speed < 10 km/h |
+* Trigger-based:
 
-👉 Trigger met → **Automatic payout initiated**  
+  * Heavy Rain
+  * Traffic Jam
+  * Flood Alert
 
----
+**Formula:**
 
-## 🤖 AI/ML Integration  
+$$
+Risk = 0.4 \cdot Rain + 0.4 \cdot Traffic + 0.2 \cdot PeakHour
+$$
 
-### 1. Risk Assessment  
-- Uses historical and real-time data  
-- Calculates zone-wise risk score  
-- Determines weekly premium  
+### 💸 Weekly Premium Plans
 
-### 2. Predictive Modeling  
-- Identifies high-risk zones  
-- Estimates disruption probability  
-- Optimizes coverage  
+* Basic – ₹29/week
+* Smart – ₹49/week
+* Pro – ₹69/week
 
-### 3. Fraud Detection  
-- Detects abnormal behavior  
-- Flags suspicious claim patterns  
-- Prevents duplicate payouts  
+### 🛡️ Claim Processing
 
----
+* Genuine claims → Approved ✅
+* Fraud detection:
 
-## 💸 Payout Logic  
+  * Location mismatch ❌
+  * Duplicate claims ❌
 
-Payout is calculated based on:  
+### 📊 Rider Dashboard
 
-Payout = Avg Hourly Income × Affected Hours × Severity Multiplier  
-
-Example:  
-₹80 × 2 × 1.5 = ₹240  
+* Rider details
+* Risk profile
+* Selected policy
+* Claim status
 
 ---
 
-## 🌟 Unique Features  
+## 🧑‍💻 Tech Stack
 
-- Hyperlocal zone-based insurance  
-- Peak-hour income protection  
-- Fully automated claim system  
-- Weekly subscription model  
-- Instant payouts  
+**Frontend:** React.js, Custom CSS (Pastel UI)
+**Backend:** Node.js, Express.js
+**Other:** REST APIs, JSON-based data flow
 
 ---
 
-# 🚨 Adversarial Defense & Anti-Spoofing Strategy  
+## 🏗️ Project Structure
 
-## ⚠️ The Market Crash Scenario  
-
-A coordinated fraud attack involving hundreds of delivery partners using **GPS spoofing** can lead to:  
-- Fake disruption claims  
-- Mass payout exploitation  
-- Financial loss for the platform  
-
-👉 Traditional GPS-based verification fails in such scenarios  
-
----
-
-## 🛡️ Multi-Layer Fraud Defense Architecture  
-
-### 1. 📍 Behavioral Pattern Analysis  
-- Compare normal delivery patterns vs current behavior  
-- Sudden inactivity + claim → flagged  
-
----
-
-### 2. 🌍 Multi-Source Location Verification  
-- GPS + network signals + movement patterns  
-- Static or unrealistic movement → suspicious  
+```
+zyrosafe-ai/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── assets/
+│   │
+│   ├── public/
+│   ├── package.json
+│
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│
+├── README.md
+└── .gitignore
+```
 
 ---
 
-### 3. 🧠 AI-Based Cluster Detection  
-- Identify multiple users claiming same event abnormally  
-- Detect coordinated fraud rings  
+## ⚙️ How to Run Locally
+
+### 1. Clone Repository
+
+```
+git clone https://github.com/your-username/zyrosafe-ai.git
+cd zyrosafe-ai
+```
+
+### 2. Start Backend
+
+```
+cd backend
+npm install
+npm run dev
+```
+
+Backend runs on:
+http://localhost:5001
+
+### 3. Start Frontend
+
+```
+cd frontend
+npm install
+npm start
+```
+
+Frontend runs on:
+http://localhost:3000
 
 ---
 
-### 4. ⏱️ Activity Validation  
-- Check last delivery timestamp  
-- Verify active session  
-- Ensure rider was genuinely working  
+## 🎥 Demo Flow
+
+1. Register rider
+2. Select disruption trigger
+3. View risk score & premium
+4. Choose weekly plan
+5. Simulate claim:
+
+   * Genuine → Approved
+   * Fraud → Rejected
+6. View dashboard
 
 ---
 
-### 5. ⚠️ Claim Risk Scoring System  
-- Each claim assigned a fraud risk score  
-- High-risk claims flagged for review  
+## ⚠️ Important Notes
+
+* Claims are **auto-triggered in real systems**
+* Buttons are added only for **prototype simulation**
+* Weekly pricing aligns with gig worker income cycles
 
 ---
 
-## ⚖️ Fairness & User Protection  
+## 🏆 Accomplishments
 
-To ensure genuine riders are not penalized:  
-
-- Soft flagging instead of instant rejection  
-- Partial payouts for uncertain cases  
-- Manual review for high-risk claims  
-
-👉 Balance between **fraud prevention and fairness**  
+* Built complete end-to-end working prototype
+* Implemented risk-based premium system
+* Designed fraud detection logic
+* Created aesthetic UI with dashboard
+* Simulated real-world insurance flow
 
 ---
 
-## 🛠️ Tech Stack  
+## 📚 What We Learned
 
-**Frontend:** React  
-**Backend:** Node.js + Express  
-**Database:** MongoDB / Firebase  
-
-**APIs:**  
-- Weather API  
-- Traffic API  
-- AQI API  
-
-**AI/ML:**  
-- Risk scoring engine  
-- Fraud detection model  
+* Parametric insurance systems
+* Full-stack development (React + Node)
+* API integration
+* Fraud detection logic
+* UI/UX design
 
 ---
 
-## 📅 Development Plan  
+## 🔮 What’s Next
 
-- Week 1–2: Research, ideation, system design  
-- Week 3–4: Core features (risk engine, triggers, claims)  
-- Week 5–6: Fraud detection, dashboard, payout system  
+* Real-time APIs (weather, traffic)
+* GPS-based validation
+* Admin approval dashboard
+* Payment integration
+* User authentication
+
+---
+
+## 🤝 Team
+
+Team Avengers 🚀
 
 ---
 
-## 🎯 One-Line Pitch  
+## ❤️ Final Note
 
-ZyroSafe AI is a hyperlocal parametric insurance platform that protects grocery delivery partners from income loss and defends against large-scale fraud using AI-driven multi-layer anti-spoofing systems.  
-
----
+ZyroSafe AI aims to bring **financial stability to gig workers**
+through simple, fast, and intelligent insurance solutions.
